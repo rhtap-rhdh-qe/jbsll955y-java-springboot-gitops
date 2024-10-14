@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jbsll955y-java-springboot-gitops
+  description: This is GitOps manifest for jbsll955y-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: jbsll955y-java-springboot
+    janus-idp.io/tekton: jbsll955y-java-springboot
+    backstage.io/kubernetes-id: jbsll955y-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:jbsll955y-java-springboot
